@@ -1,0 +1,23 @@
+{
+  "name": "praktikum3",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "sinon": "^19.0.2"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "express": "^4.21.1",
+    "mocha": "^10.7.3",
+    "supertest": "^7.0.0"
+  }
+}

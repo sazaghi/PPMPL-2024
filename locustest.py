@@ -8,14 +8,14 @@ class WebsiteUser(HttpUser):
     
     @task
     def get_user_by_id(self):
-        user_id = 1 
+        user_id = 1  # Randomized example user ID
         self.client.get(f"/users/{user_id}")
     
     @task
     def create_user(self):
         payload = {
-            "name": "test",
-            "email": "a@a"
+            "name": "Test User",
+            "email": "testuser@example.com"
         }
         self.client.post("/users", json=payload)
     
@@ -23,8 +23,8 @@ class WebsiteUser(HttpUser):
     def update_user_by_id(self):
         user_id = 1  # Randomized example user ID
         payload = {
-            "name": "update test",
-            "email": "a@a"
+            "name": "Updated User",
+            "email": "updateduser@example.com"
         }
         self.client.put(f"/users/{user_id}", json=payload)
     

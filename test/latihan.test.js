@@ -42,9 +42,9 @@ describe('Counter Component', () => {
     }); 
     test('Harusnya muncul allert', () => {
         const alertMock = jest.spyOn(window, 'alert').mockImplementation(() => {});
-        render(<AlertButton message={"Emang Jaman Pake GPT?"} />);
+        render(<AlertButton message={"Sulit kaka enggak pake chat GPT"} />);
         const button = screen.getByTestId('alert-button');
         fireEvent.click(button);
-        expect(alertMock).toHaveBeenCalledWith("Emang Jaman Pake GPT?");
+        expect(alertMock).toHaveBeenCalledWith("Sulit kaka enggak pake chat GPT");
     });                   
 });

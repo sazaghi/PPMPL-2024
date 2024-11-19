@@ -3,7 +3,7 @@ import { Counter, Greeting, AlertButton } from './latihan';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-describe('latihan Component', () => {
+describe('Counter Component', () => {
     test('renders the initial count value as 0', () => {
         render(<Counter />);
         const countValue = screen.getByTestId('counter-value');
@@ -29,7 +29,9 @@ describe('latihan Component', () => {
         const reset = screen.getByText('Reset');
         fireEvent.click(reset);
         expect(resetValue).toHaveTextContent('0');
-    });
+    });                   
+});
+describe('Greeting Component', () => {
     test('Harusnya sebut namaku', () => {
         render(<Greeting name="Saad Zaaghi" />);
         const sapaaku = screen.getByTestId('greeting');
@@ -39,12 +41,14 @@ describe('latihan Component', () => {
         render(<Greeting name="Pak Farid" />);
         const sapaaku = screen.getByTestId('greeting');
         expect(sapaaku).toHaveTextContent('Hello, Pak Farid');
-    }); 
+    });                   
+}); 
+describe('Alert Component', () => {
     test('Harusnya muncul allert', () => {
         const alertMock = jest.spyOn(window, 'alert').mockImplementation(() => {});
         render(<AlertButton message={"Sulit kaka enggak pake chat GPT"} />);
         const button = screen.getByTestId('alert-button');
         fireEvent.click(button);
         expect(alertMock).toHaveBeenCalledWith("Sulit kaka enggak pake chat GPT");
-    });                   
+    });                  
 });

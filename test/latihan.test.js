@@ -3,7 +3,7 @@ import { Counter, Greeting, AlertButton } from './latihan';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-describe('Counter Component', () => {
+describe('latihan Component', () => {
     test('renders the initial count value as 0', () => {
         render(<Counter />);
         const countValue = screen.getByTestId('counter-value');
